@@ -1,0 +1,90 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background: #99dade;
+	font-family: 'Playfair Display', serif;
+	color: #fff;
+}
+
+.title {
+	text-align: left;
+	text-shadow: 0.5px 0.5px 1px black;
+	font-size: 0.71em;
+	line-height: 0.71;
+}
+
+.container {
+	background: url('assets/zilean-1920.jpg');
+	background-repeat: no-repeat;
+	background-position: 70% 0;
+	border-radius: 20px;
+	margin: 2em auto;
+	padding: 2em;
+	height: 600px;
+	max-width: 1000px;
+	min-width: 600px;
+}
+
+main {
+	text-align: center;
+}
+
+.timer {
+	font-family: 'Barlow', sans-serif;
+	padding-left: 3.5em;
+}
+
+.min-timer {
+	margin-top: -30px;
+	/*opacity: 0;*/
+	transition-duration: 0.35ms;
+}
+
+.sec-timer {
+	
+}
+
+#min {
+	font-size: 2em;
+}
+
+#sec {
+	font-size: 13em;
+}
+
+.controls {
+	padding-left: 0.5em;
+	padding-top: 5px;
+}
+
+#startBtn {
+	background-image: url('assets/start-icon-62.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 45px;
+	width: 45px;
+	border-radius: 90% 50%;
+	opacity: 1;
+}
+
+#resetBtn {
+	background-image: url('assets/reset-icon.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 45px;
+	width: 45px;
+	border-radius: 50%;
+	position: relative;
+	right: -15%;
+}
+
+footer {
+	text-shadow: 0.5px 0.5px 1px black;
+	position: relative;
+	bottom: -10em;
+	right: -90%;
+}
