@@ -36,6 +36,7 @@ window.onload = function() {
 		min = 0;
 		sec = 0;
 		displayCount();
+		activateButtons();
 	};
 
 	function pauseCounter() {
@@ -63,14 +64,18 @@ window.onload = function() {
 /* Activate or Deactivate buttons */
 function activateButtons() {
 	let startBtn = document.getElementById('startBtn');
-	
 	let resetBtn = document.getElementById('resetBtn');
+	
+	if(isPaused){
+		if(min === 0 && sec === 0){
+			resetBtn.disabled = true;
+			resetBtn.style.opacity = 0.5;	
+		} else {
+			resetBtn.disabled = false;
+			resetBtn.style.opacity = .85;
 
-	if(isPaused) {
-		resetBtn.disabled = false;
-		resetBtn.style.opacity = .85;
-
-		startBtn.style.opacity = 0.95;
+			startBtn.style.opacity = 0.95;
+		}
 	} else {
 		resetBtn.disabled = true;
 		resetBtn.style.opacity = 0.5;
