@@ -2,8 +2,8 @@
 
 window.onload = function() { 
 	console.log('Simple Counter made with enthusiasm looking for programming cool stuff :)');
+	activateButtons();
 }
-	document.getElementById('startBtn').style.opacity = 0.95;
 	const minutes = document.getElementById('min');
 	const seconds = document.getElementById('sec');
 
@@ -13,6 +13,7 @@ window.onload = function() {
 
 	var t;
 	
+
 	function count() {
 		sec += 1;
 		if(sec===60){
@@ -65,22 +66,24 @@ window.onload = function() {
 function activateButtons() {
 	let startBtn = document.getElementById('startBtn');
 	let resetBtn = document.getElementById('resetBtn');
-	
+
 	if(isPaused){
 		if(min === 0 && sec === 0){
 			resetBtn.disabled = true;
 			resetBtn.style.opacity = 0.5;	
 		} else {
 			resetBtn.disabled = false;
-			resetBtn.style.opacity = .85;
+			resetBtn.style.opacity = .9;
 
-			startBtn.style.opacity = 0.95;
+			startBtn.style.opacity = 1;
+			startBtn.classList.remove('active');
 		}
 	} else {
 		resetBtn.disabled = true;
 		resetBtn.style.opacity = 0.5;
 
-		startBtn.style.opacity = 0.85;
+		startBtn.style.opacity = 1;
+		startBtn.classList.add('active');
 	}
 	
 }
