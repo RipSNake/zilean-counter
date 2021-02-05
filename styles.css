@@ -71,6 +71,10 @@ main {
 	opacity: 1;
 }
 
+.active {
+	box-shadow: 2px 2px 8px rgba(57,200,200,0.9), -2px -2px 8px rgba(57,200,200,0.9);
+}
+
 #resetBtn {
 	background-image: url('assets/reset-icon.jpg');
 	background-size: cover;
@@ -89,5 +93,5 @@ footer {
 	width: fit-content;
 	position: relative;
 	bottom: -40%;
-	left: 90%;
+	left: 95%;
 }
