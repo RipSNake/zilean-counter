@@ -1,3 +1,8 @@
+@font-face {
+	font-family: theFont;
+	src: url('assets/OptimusPrinceps.ttf');
+}
+
 * {
 	margin: 0;
 	padding: 0;
@@ -11,10 +16,10 @@ body {
 }
 
 .title {
-	color: black;
+	font-family: theFont;
+	color: #cce5e1;
 	text-align: left;
-	text-shadow: 0.3px 0.3px 1px #fff, -0.3px -0.3px 1px #fff;
-	font-size: 1em;
+	text-shadow: 1.3px 1.3px 2px #020005, -1.3px -1.3px 20px #020005;
 	line-height: 0.71;
 }
 
@@ -37,12 +42,15 @@ main {
 .timer {
 	font-family: 'Barlow', sans-serif;
 	padding-left: 3.5em;
+	position: relative;
 }
 
 .min-timer {
-	margin-top: -30px;
-	/*opacity: 0;*/
-	transition-duration: 0.35ms;
+	min-height: 38px;
+}
+
+.min-timer {
+	
 }
 
 .sec-timer {
@@ -51,14 +59,29 @@ main {
 
 #min {
 	font-size: 2em;
+	display: block;
+	margin-top: -75px;
+	opacity: 0;
+	transition-duration: 1s;
+}
+
+#min.on {
+	margin-top: -28px;
+	opacity: 1;
 }
 
 #sec {
 	font-size: 13em;
 }
 
-.controls {
+#controls {
 	padding-left: 1em;
+	margin-top: 47px;
+	transition-duration: 1s;
+}
+
+#controls.on {
+	margin-top: 0;
 }
 
 #startBtn {
@@ -72,7 +95,7 @@ main {
 }
 
 .active {
-	box-shadow: 2px 2px 8px rgba(57,200,200,0.9), -2px -2px 8px rgba(57,200,200,0.9);
+	box-shadow: 2px 2px 8px rgba(57,200,210,0.9), -2px -2px 8px rgba(57,200,210,0.9);
 }
 
 #resetBtn {
