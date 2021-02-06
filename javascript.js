@@ -18,6 +18,7 @@ window.onload = function() {
 		sec += 1;
 		if(sec===60){
 			min += 1;
+			showMinutes();
 			sec = 0;
 		}
 		displayCount();
@@ -38,6 +39,7 @@ window.onload = function() {
 		sec = 0;
 		displayCount();
 		activateButtons();
+		showMinutes();
 	};
 
 	function pauseCounter() {
@@ -84,6 +86,16 @@ function activateButtons() {
 
 		startBtn.style.opacity = 1;
 		startBtn.classList.add('active');
+	}	
+}
+
+function showMinutes() {
+	if(min !== 0) {
+		minutes.classList.add('on');
+		document.getElementById('controls').classList.add('on');	
+	} else {
+		minutes.classList.remove('on');
+		document.getElementById('controls').classList.remove('on');
 	}
 	
 }
