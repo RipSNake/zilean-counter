@@ -4,6 +4,7 @@ window.onload = function() {
 	console.log('Simple Counter made with enthusiasm looking for programming cool stuff :)');
 	activateButtons();
 }
+
 	const minutes = document.getElementById('min');
 	const seconds = document.getElementById('sec');
 
@@ -55,7 +56,7 @@ window.onload = function() {
 		minutes.innerHTML = padVal(min);
 		seconds.innerHTML = padVal(sec);
 	}
-
+/* Parses the values to be shown correctly */
 	function padVal(val) {
 		var valString = val + "";
 		if(valString.length < 2) {
@@ -88,7 +89,7 @@ function activateButtons() {
 		startBtn.classList.add('active');
 	}	
 }
-
+/* Show or hide the minutes */
 function showMinutes() {
 	if(min !== 0) {
 		minutes.classList.add('on');
